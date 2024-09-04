@@ -3,213 +3,445 @@
 #include <string>
 #include <cmath>
 
-
 using namespace std;
 
-// Función para calcular el logaritmo con una base especificada
-double logBase(double a, double base) {
-    if (base <= 0) {
-        std::cerr << "Error: La base debe ser un número positivo." << std::endl;
-        return NAN; // Devuelve No-es-un-Número si la base no es válida
-    }
-    return log(a) / log(base);
+// Función para calcular el logaritmo natural
+double calcularLogaritmoNatural(double numero) {
+	return log(numero);
 }
 
-// Función para calcular el logaritmo con una raíz como base
-double logRoot(double a, double root) {
-    if (root <= 0) {
-        std::cerr << "Error: La raíz debe ser un número positivo." << std::endl;
-        return NAN; // Devuelve No-es-un-Número si la raíz no es válida
-    }
-    return logBase(a, pow(root, 1.0 / root));
+// Función para calcular el logaritmo en base de raíz
+double calcularLogaritmoRaiz(double numero, double raiz) {
+	return log(numero) / log(raiz);
 }
 
-// Función para calcular el logaritmo con una fracción como base
-double logFraction(double a, double numerator, double denominator) {
-    if (denominator == 0) {
-        std::cerr << "Error: El denominador no puede ser cero." << std::endl;
-        return NAN; // Devuelve No-es-un-Número si el denominador es cero
-    }
-    return logBase(a, numerator / denominator);
+// Función para calcular el logaritmo de base de fracción
+double calcularLogaritmoFraccion(double numero, double numerador, double denominador) {
+	return log(numero) / log(numerador / denominador);
+}
+
+// Función para calcular el logaritmo en base específica
+double calcularLogaritmoBaseEspecifica(double numero, double base) {
+	return log(numero) / log(base);
 }
 
 int main() {
-	
+
+	//Variables del programa como los indices y el ciclo Do-while...
 	int opcion;
 	int opcion2;
 	int opcion3;
 	char respuesta;
-	
+	char nombre[50];
+
+
+	//variables de la calculadora de matematicas
+	double numero;
+	double base;
+	double numerador;
+	double denominador;
+	double raiz;
+	double resultado;
+
 	cout << "/---------------------------------------------------/"<<endl;
 	cout << "/--------------------INICIO-------------------------/"<<endl;
 	cout << "/---------------------------------------------------/"<<endl;
 	cout << endl;
-	
-	do{
+
+	do {
+		
+		cout << "Ingrese su nombre ->  "<<endl;
+		cin >> nombre;
+		cout <<endl;
+				
 		cout <<"En que idioma desea continuar?"<<endl;
-		cout <<"1. Español"<<endl;
+		cout <<"1. Espanol"<<endl;
 		cout <<"2. Ingles"<<endl;
 		cout <<"3. Salir"<<endl;
 		cin >> opcion;
-		
-		switch (opcion){
+
+		switch (opcion) {
 			case 1:           //Porgrama en español
-				cout << "Bienvenido a nuestro programa en Español"<<endl;
+				cout << "Bienvenido a nuestro programa en Espanol"<<endl;
 				cout << endl;
 				
 				
+
+
+				//Aqui se va a colocar la portada con el tilulo y todo el resto...
+
+
 				cout << "/---------------------------------------------------/"<<endl;
-	            cout << "/--------------------INDICE-------------------------/"<<endl;
-	            cout << "/---------------------------------------------------/"<<endl;
-	            cout << endl;
-	            
-	            cout << "/---------------------------------------------------/"<<endl;
-	            cout << "Capitulos de la proyecto:"<<endl;
-	            cout << "1. Capitulo I"<<endl;
-	            cout << "2. Capitulo II"<<endl;
-	            cout << "3. Capitulo III"<<endl;
-	            cout << "4. Capitulo IV"<<endl;
-	            cout << "5. Capitulo V"<<endl;
-	            cout << endl;
-	            
-	            cout << "Apartado de matematicas:"<<endl;
-	            cout << "6. Calculadora de Logaritmos"<<endl;
-	            cout << "7. Que es un logaritmo?"<<endl;
-	            cout << "8. sabias que... ?"<<endl;
-	            cout << "9. Aplicaciones de un logaritmos"<<endl;
-	            cout << "10. Como se resuelve"<<endl;
-	            cout << "11. Como se resuelve"<<endl;
-	            cout << "/---------------------------------------------------/"<<endl;
-	            cin >> opcion2;
-	            
-	            
-	            switch (opcion2) {
-	            	case 1:
-	            		cout << "Capitulo I"<<endl;
-	            		system("explorer proyecto.docx");
-	            		break;
-	            	
-	            	case 2:
-	            		cout << "Capitulo II"<<endl;
-	            		break;
-	            		
-	            	case 3:
-	            		cout << "Capitulo III"<<endl;
-	            		break;
-	            		
-	            	case 4:
-	            		cout << "Capitulo IV"<<endl;
-	            		break;
-	            		
-	            	case 5:
-	            		cout << "Capitulo V"<<endl;
-	            		break;
-	            		
-	            		//Apartado de matematicas <3
-	            		
-	            	case 6: //Calculadora de logaritmo
-	            	    cout << "Bienvenido a la calculadora de logaritmos"<<endl;
-	            	    cout << "1. Calcular logaritmo con una base espesificada"<<endl;
-	            	    cout << "2. Calcular logaritmo con una raíz como base"<<endl;
-	            	    cout << "3. Calcular logaritmo con una fracción como base"<<endl;
-	            	    cout << "Ingrese una opcion:";
-	            	    cin >> opcion3;
-	            	    
-	            	    double x, base, root, numerador, denominador;
-	            	    
-	            	        switch (opcion3) {
-                                case 1:
-                                    cout << "Ingrese un número: ";
-                                    cin >> x;
-                                    cout << "Ingrese la base: ";
-                                    cin >> base;
+				cout << "/--------------------INDICE-------------------------/"<<endl;
+				cout << "/---------------------------------------------------/"<<endl;
+				cout << endl;
 
-                                    double result = logBase(x, base);
-                                    cout << "Log base " << base << " de " << x << " es " << result <<endl;
-                                    break;
+				cout << "/---------------------------------------------------/"<<endl;
+				cout << "Capitulos de la proyecto:"<<endl;
+				cout << "1. Capitulo I"<<endl;
+				cout << "2. Capitulo II"<<endl;
+				cout << "3. Capitulo III"<<endl;
+				cout << "/---------------------------------------------------/"<<endl;
+				cout << endl;
 
-                                /*case 2: 
-                                    cout << "Ingrese un número: ";
-                                    cin >> x;
-                                    cout << "Ingrese la raíz: ";
-                                    cin >> root;
 
-                                    result = logRoot(x, root);
-                                    cout << "Log base raíz " << root << " de " << x << " es " << result <<endl;
-                                    break;*/
+				cout << "/---------------------------------------------------/"<<endl;
+				cout << "Apartado de matematicas:"<<endl;
+				cout << "4. Calculadora de Logaritmos"<<endl;
+				cout << "5. Que es un logaritmo?"<<endl;
+				cout << "6. Sabias que... ?"<<endl;
+				cout << "7. Aplicaciones de un logaritmos"<<endl;
+				cout << "8. Como se resuelve"<<endl;
+				cout << "9. Ejemplos ";
+				cout << endl;
+				cout << "/---------------------------------------------------/"<<endl;
+				cin >> opcion2;
 
-                                /*case 3:
-                                    cout << "Ingrese un número: ";
-                                    cin >> x;
-                                    cout << "Ingrese el numerador: ";
-                                    cin >> numerador;
-                                    cout << "Ingrese el denominador: ";
-                                    cin >> denominador;
- 
-                                    result = logFraction(x, numerator, denominator);
-                                    cout << "Log base " << numerator << "/" << denominator << " de " << x << " es " << result <<endl;
-                                    break;*/
 
-                                //default:
-                                    cerr << "Error: Opción inválida." << std::endl;
-                                    break;
-                            }
-	            		
-	            		break;
-	            	
-	            	
-	            	default:
-	            		cout <<"ERROR! Opcion no valida x_x"<<endl;
-				        return 1;
+				switch (opcion2) {
+					case 1:
+						cout << "/---------------------------------------------------/"<<endl;
+						cout << "Capitulo I"<<endl;
+						system("explorer proyecto.docx");
+						cout << "/---------------------------------------------------/"<<endl;
+						break;
+
+					case 2:
+						cout << "/---------------------------------------------------/"<<endl;
+						cout << "Capitulo II"<<endl;
+						system("explorer proyecto1.docx");
+						cout << "/---------------------------------------------------/"<<endl;
+						break;
+
+					case 3:
+						cout << "/---------------------------------------------------/"<<endl;
+						cout << "Capitulo III"<<endl;
+						system("explorer proyecto2.docx");
+						cout << "/---------------------------------------------------/"<<endl;
+						break;
+
+
+					//Apartado de matematicas <3
+
+					case 4: //Calculadora de logaritmo
+						cout << "/---------------------------------------------------/"<<endl;
+						cout << "Bienvenido a la calculadora de logaritmos"<<endl;
+						cout << "1. Calcular logaritmo natural"<<endl;
+						cout << "2. Calcular logaritmo en base raiz"<<endl;
+						cout << "3. Calcular logaritmo en base fraccion"<<endl;
+						cout << "4. Calcular logaritmo en base espesifica"<<endl;
+						cout << "Ingrese una opcion:";
+						cout << endl;
+						cout << "/---------------------------------------------------/"<<endl;
+						cin >> opcion3;
+
+						if (opcion3 == 1) {
+							cout << "Ingrese un numero: ";
+							cin >> numero;
+							cout << endl;
+
+							//mostrar paso a paso en pantalla
+							cout << "Paso 1: Ingrese el numero"<<endl;
+							cout << "Numero: "<<numero <<endl;
+							cout << endl;
+
+							cout << "Paso 2: Calcular logaritmo natural"<<endl;
+							cout << "log(" << numero << ") = " << log(numero) << endl;
+							double resultadoNatural = log(numero);
+							cout << endl;
+
+							cout << "Paso 3: Mostrar el resultado"<<endl;
+							cout << "El logaritmo natural de " <<numero << " es: " <<resultadoNatural <<endl;
+							cout << endl;
+
+						} else if (opcion3 == 2) {
+
+							cout << "Ingrese el numero: ";
+							cin >> numero;
+							cout << "Ingrese la raiz: ";
+							cin >> raiz;
+
+							//Mostar el paso a paso en pantalla
+							cout << "Paso 1: Ingrese el numero y la raiz" <<endl;
+							cout << "Numero: " << numero <<endl;
+							cout << "Raiz: " << raiz <<endl;
+							cout << endl;
+
+							cout << "Paso 2: Calcular el logaritmo en base de raiz" <<endl;
+							cout << "log(" << numero << ") = " << log(numero) <<endl;
+							cout << "log(" << raiz << ") = " << log(raiz) << std::endl;
+							double resultadoRaiz = log(numero) / log(raiz);
+							cout << endl;
+
+							cout << "Paso 3: Mostrar el resultado" <<endl;
+							cout << "El logaritmo en base de raiz de " << numero << " con raiz " << raiz << " es: " << resultadoRaiz <<endl;
+
+						} else if (opcion3 == 3) {
+							cout << "Ingrese el numero: ";
+							cin >> numero;
+							cout << "Ingrese el numerador: ";
+							cin >> numerador;
+							cout << "Ingrese el denominador: ";
+							cin >> denominador;
+							cout << endl;
+
+							// Mostrar el paso a paso en pantalla
+							cout << "Paso 1: Ingrese el numero, el numerador y el denominador" <<endl;
+							cout << "Numero: " << numero <<endl;
+							cout << "Numerador: " << numerador <<endl;
+							cout << "Denominador: " << denominador <<endl;
+							cout << endl;
+
+							cout << "Paso 2: Calcular el logaritmo de base de fraccion" <<endl;
+							cout << "log(" << numero << ") = " << log(numero) <<endl;
+							cout << "log(" << numerador << "/" << denominador << ") = " << log(numerador / denominador) <<endl;
+							double resultadoFraccion = log(numero) / log(numerador / denominador);
+							cout << endl;
+
+							cout << "Paso 3: Mostrar el resultado" <<endl;
+							cout << "El logaritmo de base de fracción de " << numero << " con numerador " << numerador << " y denominador " << denominador << " es: " << resultadoFraccion <<endl;
+
+						} else if (opcion3 == 4) {
+							cout << "Ingrese el numero: ";
+							cin >> numero;
+							cout << "Ingrese la base: ";
+							cin >> base;
+							cout << endl;
+
+							// Mostrar el paso a paso en pantalla
+							cout << "Paso 1: Ingrese el numero y la base" <<endl;
+							cout << "Numero: " << numero <<endl;
+							cout << "Base: " << base <<endl;
+							cout << endl;
+
+							cout << "Paso 2: Calcular el logaritmo en base especifica" <<endl;
+							cout << "log(" << numero << ") = " << log(numero) <<endl;
+							cout << "log(" << base << ") = " << log(base) <<endl;
+							double resultadoBaseEspecifica = log(numero) / log(base);
+							cout << endl;
+
+							cout << "Paso 3: Mostrar el resultado" <<endl;
+							cout << "El logaritmo en base especifica de " << numero << " con base " << base << " es: " << resultadoBaseEspecifica <<endl;
+
+						} else {
+							cout << "Haz cometido un errro!  "<<nombre <<" intente de nuevo x_x"<<endl;
+						}
+						// Fin de la calculadora de logaritmos <3...
+
+
+						break;
+
+					case 5:
+						break;
+
+					case 6:
+						break;
+
+					case 7:
+						break;
+
+					case 8:
+						break;
+
+					case 9:
+						break;
+
+
+					default:
+						cout << "Haz cometido un errro!  "<<nombre <<" intente de nuevo x_x"<<endl;
+						return 1;
 				}
-	            
-	            
-	            
+
 				break;
-				
-			case 2:        //Programa en Ingles
+
+			case 2:        //Programa en Ingles inicia desde aqui
 				cout << "Welcome to the program in English"<<endl;
 				cout << endl;
-				
+
 				cout << "/---------------------------------------------------/"<<endl;
-	            cout << "/---------------------INDEX-------------------------/"<<endl;
-	            cout << "/---------------------------------------------------/"<<endl;
-	            cout << endl;
-	            
-	            cout << "project chapters:"<<endl;
-	            cout << "1. chapter I"<<endl;
-	            cout << "2. chapter II"<<endl;
-	            cout << "3. chapter III"<<endl;
-	            cout << "4. chapter IV"<<endl;
-	            cout << "5. chapter V"<<endl;
-	            
-	            cout << "mathematics section:"<<endl;
-	            cout << "6. logarithm calculator"<<endl;
-				
+				cout << "/---------------------INDEX-------------------------/"<<endl;
+				cout << "/---------------------------------------------------/"<<endl;
+				cout << endl;
+
+				cout << "/---------------------------------------------------/"<<endl;
+				cout << "Project Chapters:"<<endl;
+				cout << "1. Chapter I"<<endl;
+				cout << "2. Chapter II"<<endl;
+				cout << "3. Chapter III"<<endl;
+				cout << "/---------------------------------------------------/"<<endl;
+				cout << endl;
+
+				cout << "/---------------------------------------------------/"<<endl;
+				cout << "mathematics section:"<<endl;
+				cout << "4. Logarithm calculator"<<endl;
+				cout << "5. What is logarithm"<<endl;
+				cout << "6. Did you know that...?"<<endl;
+				cout << "7. Aplications of a logarithm"<<endl;
+				cout << "8. How to resolve"<<endl;
+				cout << "9. Examples"<<endl;
+				cout << "/---------------------------------------------------/"<<endl;
+				cin >> opcion2;
+
+
+				switch (opcion2) {
+					case 1:
+						cout << "hello work"<<endl;
+						break;
+
+					case 2:
+						break;
+
+					case 3:
+						break;
+
+
+					case 4:  //logarithm calculator
+						cout << "/---------------------------------------------------/"<<endl;
+						cout << "Welcome to the logarithm calculator"<<endl;
+						cout << "1. calculate natural logarithm"<<endl;
+						cout << "2. calculate logarithm to base square root"<<endl;
+						cout << "3. calculate logarithm in fraction base"<<endl;
+						cout << "4. calculate logarithm to specific base"<<endl;
+						cout << "Enter an option: ";
+						cout << endl;
+						cin >> opcion3;
+						cout << "/---------------------------------------------------/"<<endl;
+
+						if (opcion3 == 1) {
+							cout << "Please enter a number: ";
+							cin >> numero;
+							cout << endl;
+
+							cout << "Step 1: Enter the number"<<endl;
+							cout << "number: "<<numero <<endl;
+							cout << endl;
+							
+                            cout << "Step 2: calculate natural logarithm"<<endl;
+                            cout << "log(" << numero << ") = " << log(numero) << endl;
+							double resultadoNatural = log(numero);
+							cout << endl;
+							
+						    cout << "Step 3: show result"<<endl;
+							cout << "The natural logarithm of " <<numero << " is: " <<resultadoNatural <<endl;
+							cout << endl;
+							
+						}else if (opcion3 == 2){
+							cout << "Enter a number: ";
+						    cin >> numero;
+						    cout << "Enter a root: ";
+						    cin >> raiz;
+
+						    cout << "Step 1: Enter the number and the square root" <<endl;
+						    cout << "Number: " << numero <<endl;
+						    cout << "Root: " << raiz <<endl;
+						    cout << endl;
+
+						    cout << "Step 2: calculate the logarithm based on the square root" <<endl;
+						    cout << "log(" << numero << ") = " << log(numero) <<endl;
+						    cout << "log(" << raiz << ") = " << log(raiz) << std::endl;
+						    double resultadoRaiz = log(numero) / log(raiz);
+						    cout << endl;
+
+						    cout << "Step 3: show the result" <<endl;
+						    cout << "The logarithm to the base of the square root of " << numero << " with root " << raiz << " is: " << resultadoRaiz <<endl;
+
+							
+						}else if (opcion3 == 3){
+							cout << "Enter a number: ";
+							cin >> numero;
+							cout << "Enter a numerator: ";
+							cin >> numerador;
+							cout << "Enter a denominator: ";
+							cin >> denominador;
+							cout << endl;
+
+							// Mostrar el paso a paso en pantalla
+							cout << "Step 1: Enter the number, numerator and denominator" <<endl;
+							cout << "Number: " << numero <<endl;
+							cout << "Numerator: " << numerador <<endl;
+							cout << "Denominator: " << denominador <<endl;
+							cout << endl;
+
+							cout << "Step 2: Calculate the logarithm of the fraction base" <<endl;
+							cout << "log(" << numero << ") = " << log(numero) <<endl;
+							cout << "log(" << numerador << "/" << denominador << ") = " << log(numerador / denominador) <<endl;
+							double resultadoFraccion = log(numero) / log(numerador / denominador);
+							cout << endl;
+
+							cout << "Step 3: Show the result" <<endl;
+							cout << "The logarithm of fraction base " << numero << " with numerator " << numerador << " and denominator " << denominador << " is: " << resultadoFraccion <<endl;
+
+						}else if (opcion3 == 4){
+								cout << "Enter a number: ";
+							    cin >> numero;
+							    cout << "Enter a base: ";
+							    cin >> base;
+							    cout << endl;
+
+    							cout << "Step 1: Enter the number and base" <<endl;
+	    						cout << "Number: " << numero <<endl;
+		    					cout << "Base: " << base <<endl;
+			    				cout << endl;
+ 
+    							cout << "Step 2: Calculate the logarithm in specific base" <<endl;
+	    						cout << "log(" << numero << ") = " << log(numero) <<endl;
+		    					cout << "log(" << base << ") = " << log(base) <<endl;
+			    				double resultadoBaseEspecifica = log(numero) / log(base);
+				    			cout << endl;
+
+					    		cout << "Step 3: Display the result" <<endl;
+						    	cout << "The logarithm in specific base of " << numero << " whith base " << base << " is: " << resultadoBaseEspecifica <<endl;
+
+						}else{
+							cout << "you made a mistake! "<<nombre <<" try again x_x"<<endl;
+						}
+
+						break;
+
+					case 7:
+						break;
+
+					case 8:
+						break;
+
+					case 9:
+						break;
+
+					case 10:
+						break;
+
+					case 11:
+						break;
+				}
+
 				break;
-				
+
 			case 3:
-				cout <<"Gracias por Ingresar a nuestro proyecto <3"<<endl;
+				cout <<"Gracias por Ingresar a nuestro proyecto "<<nombre <<" Ten feliz dia :D "<<endl;
 				break;
-				
+
 			default:
-				cout <<"ERROR! Opcion no valida x_x"<<endl;
-				
+				cout << "Haz cometido un error! " <<nombre <<" intente de nuevo x_x " <<endl;
+
 				return 2;
-		
-		}		
-		
-		
-		
-    	cout << endl;
-    	cout << endl;
-    	cout << "Desea volver a ejecutar el proyecto? (s/n): ";
-    	cin >> respuesta;
-	}while (respuesta == 's' || respuesta == 'S');
-	
+
+		}
+
+
+
+		cout << endl;
+		cout << endl;
+		cout << "Desea volver a ejecutar el proyecto? (s/n): ";
+		cin >> respuesta;
+
+	} while (respuesta == 's' || respuesta == 'S');
+
 	cout << endl;
-	cout << "Gracias por ingresar a nuestro proyecto <3";
-	
-	
+	cout << endl;
+	cout <<"Gracias por Ingresar a nuestro proyecto "<<nombre <<" Ten feliz dia :D "<<endl;
+	cout << endl;
+	cout << endl;
+
+
 	return 0;
 }
