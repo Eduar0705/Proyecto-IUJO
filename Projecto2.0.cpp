@@ -81,9 +81,7 @@ int main() {
 				cout << "1. Capitulo I"<<endl;
 				cout << "2. Capitulo II"<<endl;
 				cout << "3. Capitulo III"<<endl;
-				cout << "/---------------------------------------------------/"<<endl;
 				cout << endl;
-
 
 				cout << "/---------------------------------------------------/"<<endl;
 				cout << "Apartado de matematicas:"<<endl;
@@ -94,7 +92,9 @@ int main() {
 				cout << "8. Como se resuelve"<<endl;
 				cout << "9. Ejemplos ";
 				cout << endl;
+				
 				cout << "/---------------------------------------------------/"<<endl;
+				cout << "10. Integrantes"<<endl;
 				cin >> opcion2;
 
 
@@ -244,6 +244,10 @@ int main() {
 						break;
 
 					case 9:
+						break;
+						
+					case 10:
+						system("start integrantes.pdf");
 						break;
 
 
