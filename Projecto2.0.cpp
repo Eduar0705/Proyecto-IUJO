@@ -32,7 +32,7 @@ int main() {
 	int opcion2;
 	int opcion3;
 	char respuesta;
-	char nombre[50];
+	string nombre;
 
 
 	//variables de la calculadora de matematicas
