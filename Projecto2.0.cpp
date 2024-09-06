@@ -86,15 +86,11 @@ int main() {
 				cout << "/---------------------------------------------------/"<<endl;
 				cout << "Apartado de matematicas:"<<endl;
 				cout << "4. Calculadora de Logaritmos"<<endl;
-				cout << "5. Que es un logaritmo?"<<endl;
-				cout << "6. Sabias que... ?"<<endl;
-				cout << "7. Aplicaciones de un logaritmos"<<endl;
-				cout << "8. Como se resuelve"<<endl;
-				cout << "9. Ejemplos ";
+				cout << "5. Teoria de Logaritmo"<<endl;
 				cout << endl;
 				
 				cout << "/---------------------------------------------------/"<<endl;
-				cout << "10. Integrantes"<<endl;
+				cout << "6. Integrantes"<<endl;
 				cin >> opcion2;
 
 
@@ -132,7 +128,6 @@ int main() {
 						cout << "4. Calcular logaritmo en base espesifica"<<endl;
 						cout << "Ingrese una opcion:";
 						cout << endl;
-						cout << "/---------------------------------------------------/"<<endl;
 						cin >> opcion3;
 
 						if (opcion3 == 1) {
@@ -233,20 +228,8 @@ int main() {
 
 					case 5:
 						break;
-
-					case 6:
-						break;
-
-					case 7:
-						break;
-
-					case 8:
-						break;
-
-					case 9:
-						break;
 						
-					case 10:
+					case 6:
 						system("start integrantes.pdf");
 						break;
 
@@ -272,18 +255,17 @@ int main() {
 				cout << "1. Chapter I"<<endl;
 				cout << "2. Chapter II"<<endl;
 				cout << "3. Chapter III"<<endl;
-				cout << "/---------------------------------------------------/"<<endl;
 				cout << endl;
 
 				cout << "/---------------------------------------------------/"<<endl;
 				cout << "mathematics section:"<<endl;
 				cout << "4. Logarithm calculator"<<endl;
-				cout << "5. What is logarithm"<<endl;
-				cout << "6. Did you know that...?"<<endl;
-				cout << "7. Aplications of a logarithm"<<endl;
-				cout << "8. How to resolve"<<endl;
-				cout << "9. Examples"<<endl;
+				cout << "5. Logarithm Theory"<<endl;
+				
+				cout << endl;
+				
 				cout << "/---------------------------------------------------/"<<endl;
+				cout << "6. members"<<endl;
 				cin >> opcion2;
 
 
@@ -402,20 +384,13 @@ int main() {
 
 						break;
 
-					case 7:
+					case 5:
 						break;
 
-					case 8:
+					case 6:
+						system("start members.pdf");
 						break;
 
-					case 9:
-						break;
-
-					case 10:
-						break;
-
-					case 11:
-						break;
 				}
 
 				break;
