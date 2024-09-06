@@ -54,7 +54,7 @@ int main() {
 		cin >> nombre;
 		cout <<endl;
 				
-		cout <<"En que idioma desea continuar?"<<endl;
+		cout <<"En que idioma desea continuar "<<nombre <<"?"<<endl;
 		cout <<"1. Espanol"<<endl;
 		cout <<"2. Ingles"<<endl;
 		cout <<"3. Salir"<<endl;
@@ -62,7 +62,7 @@ int main() {
 
 		switch (opcion) {
 			case 1:           //Porgrama en español
-				cout << "Bienvenido a nuestro programa en Espanol"<<endl;
+				cout << "Bienvenido a nuestro programa "<<nombre <<"  en Espanol"<<endl;
 				cout << endl;
 				
 				
@@ -77,7 +77,7 @@ int main() {
 				cout << endl;
 
 				cout << "/---------------------------------------------------/"<<endl;
-				cout << "Capitulos de la proyecto:"<<endl;
+				cout << "Capitulos de la proyecto de TID y RSP:"<<endl;
 				cout << "1. Capitulo I"<<endl;
 				cout << "2. Capitulo II"<<endl;
 				cout << "3. Capitulo III"<<endl;
@@ -98,21 +98,21 @@ int main() {
 					case 1:
 						cout << "/---------------------------------------------------/"<<endl;
 						cout << "Capitulo I"<<endl;
-						system("explorer proyecto.docx");
+						system("start proyecto.pdf");
 						cout << "/---------------------------------------------------/"<<endl;
 						break;
 
 					case 2:
 						cout << "/---------------------------------------------------/"<<endl;
 						cout << "Capitulo II"<<endl;
-						system("explorer proyecto1.docx");
+						system("start proyecto1.pdf");
 						cout << "/---------------------------------------------------/"<<endl;
 						break;
 
 					case 3:
 						cout << "/---------------------------------------------------/"<<endl;
 						cout << "Capitulo III"<<endl;
-						system("explorer proyecto2.docx");
+						system("start proyecto2.pdf");
 						cout << "/---------------------------------------------------/"<<endl;
 						break;
 
@@ -242,7 +242,7 @@ int main() {
 				break;
 
 			case 2:        //Programa en Ingles inicia desde aqui
-				cout << "Welcome to the program in English"<<endl;
+				cout << "Welcome "<<nombre <<"  to the program in English"<<endl;
 				cout << endl;
 
 				cout << "/---------------------------------------------------/"<<endl;
