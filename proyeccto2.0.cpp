@@ -46,7 +46,7 @@ int main (){
 	cout << endl;
 
 	do{
-		cout << "En que idioma desea ejecutar el programa  "<<nombre <<endl;
+		cout << "En que idioma desea ejecutar el programa  "<<nombre <<endl;    //inicion del programa en español
 	    cout << "1. Español"<<endl;
 	    cout << "2. Ingles"<<endl;
 	    cout << "3. Salir"<<endl;
@@ -63,7 +63,7 @@ int main (){
 	            cout << "************************************************"<<endl;
 	            cout << endl;
 
-                //Aqui va la portada...
+                system("start C:/Users/eduar/Desktop/Proyecto2/portada.pdf");
 
 	            cout << "************************************************"<<endl;
 	            cout << "**              Indice de la Revista          **"<<endl;
@@ -94,22 +94,22 @@ int main (){
 				switch (opcion2){
 				case 1:
 		    		cout << "EL Capitulo I es: "<<endl;
-	    			system("start C:/Users/eduar/Desktop/Proyecto2.0/proyecto.pdf");
+	    			system("start C:/Users/eduar/Desktop/Proyecto2/proyecto.pdf");
 					break;
 
 				case 2:
 				    cout << "EL Capitulo II es: "<<endl;
-			    	system("start C:/Users/eduar/Desktop/Proyecto2.0/proyecto1.pdf");
+			    	system("start C:/Users/eduar/Desktop/Proyecto2/proyecto1.pdf");
 				    break;
 
 				case 3:
 				    cout << "EL Capitulo III es: "<<endl;
-				    system("start C:/Users/eduar/Desktop/Proyecto2.0/proyecto2.pdf");
+				    system("start C:/Users/eduar/Desktop/Proyecto2/proyecto2.pdf");
 				    break;
 
 				case 4:
 				    cout << "EL Capitulo IV y V es: "<<endl;
-				    system("start C:/Users/eduar/Desktop/Proyecto2.0/proyecto3.pdf");
+				    system("start C:/Users/eduar/Desktop/Proyecto2/proyecto3.pdf");
 				    break;
 
 				case 5:
@@ -217,9 +217,10 @@ int main (){
 
 				case 8:
 				    cout << "Los integrante son :"<<endl;
-				    system("start C:/Users/eduar/Desktop/Proyecto2.0/integrantes.pdf");
+				    system("start C:/Users/eduar/Desktop/Proyecto2/integrantes.pdf");
 				    break;
-				
+				case 9:
+			    	break;
 				default:
 				cout << "Haz cometido un error! "<<nombre <<"  intenta de nuevo x_x"<<endl;
 					break;
@@ -236,7 +237,7 @@ int main (){
 	        cout << "************************************************"<<endl;
 	        cout << endl;
 
-                //Aqui va la portada...
+            system("start C:/Users/eduar/Desktop/Proyecto2/portada.pdf");
 
             cout << "************************************************"<<endl;
 	        cout << "**                 Journal index              **"<<endl;
@@ -268,22 +269,22 @@ int main (){
 			{
 			case 1:
 			    cout << "Chapter I: "<<endl;
-				system("start C:/Users/eduar/Desktop/Proyecto2.0/ChapterI.pdf");
+				system("start C:/Users/eduar/Desktop/Proyecto2/ChapterI.pdf");
 				break;
 			
 			case 2:
 			    cout << "Chapter II: "<<endl;
-			    system("start C:/Users/eduar/Desktop/Proyecto2.0/ChapterII.pdf");
+			    system("start C:/Users/eduar/Desktop/Proyecto2/ChapterII.pdf");
 			    break;
 
 			case 3:
 			    cout << "Chapter III: "<<endl;
-				system("start C:/Users/eduar/Desktop/Proyecto2.0/ChapterIII.pdf");
+				system("start C:/Users/eduar/Desktop/Proyecto2/ChapterIII.pdf");
 			    break;
 
 			case 4:
 			    cout << "Chapter IV and V: "<<endl;
-				system("start C:/Users/eduar/Desktop/Proyecto2.0/ChapterI.pdf");
+				system("start C:/Users/eduar/Desktop/Proyecto2/ChapterI.pdf");
 		    	break;
 
 			case 5:
@@ -388,7 +389,7 @@ int main (){
 
 			case 8:
 			    cout << "The members are: "<<endl;
-				system("start C:/Users/eduar/Desktop/Proyecto2.0/members.pdf");
+				system("start C:/Users/eduar/Desktop/Proyecto2/members.pdf");
 			    break;
 			
 			default:
