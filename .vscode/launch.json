@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/eduar/Desktop/proyecto2",
-      "program": "c:/Users/eduar/Desktop/proyecto2/build/Debug/outDebug",
+      "cwd": "c:/Users/eduar/Desktop/Proyecto2.0",
+      "program": "c:/Users/eduar/Desktop/Proyecto2.0/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
