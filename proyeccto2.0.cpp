@@ -30,7 +30,7 @@ int main (){
 	int opcion;
 	int opcion2;
 	int opcion3;
-	char respuesta;
+	char respuesta;  
 	string nombre;
 
 	//variables de la calculadora de matematicas
@@ -88,8 +88,7 @@ int main (){
 		        cout << "7. Revista"<<endl;
 				cout << "8. Integrantes"<<endl;
 				cout << "9. Juego didactico"<<endl;
-				cout << "10. Ayuda del sistema"<<endl;
-				cout << "11. Creditos"<<endl;
+				
 				cin >> opcion2;
                 
 				switch (opcion2){
@@ -219,6 +218,10 @@ int main (){
 				case 6:
 					system("start mate.pdf");
 					break;
+					
+				case 7:
+					system("start Revista.pdf");
+					break;
 
 				case 8:
 				    cout << "Los integrante son :"<<endl;
@@ -267,8 +270,8 @@ int main (){
 			cout << "------------------------------------------------"<<endl;
 	        cout << "7. Magazine"<<endl;
 			cout << "8. Members"<<endl;
-			cout << "9. System Help"<<endl;
-			cout << "10. credits"<<endl;
+			cout << "9. Educational game"<<endl;
+		
 			cout << endl;
 
 			cin >> opcion2;
@@ -292,7 +295,7 @@ int main (){
 
 			case 4:
 			    cout << "Chapter IV and V: "<<endl;
-				system("start ChapterI.pdf");
+				system("start ChapterIV.pdf");
 		    	break;
 
 			case 5:
@@ -339,7 +342,7 @@ int main (){
 	    			cout << "log(" << numero << ") = " << log(numero) <<endl;
 					cout << "log(" << base << ") = " << log(base) <<endl;
 					double resultadoBaseEspecifica = log(numero) / log(base);
-		  			cout << endl;
+		  		    cout << endl;
 
 					cout << "Step 3: Display the result" <<endl;
 			    	cout << "The logarithm in specific base of " << numero << " whith base " << base << " is: " << resultadoBaseEspecifica <<endl;
@@ -403,6 +406,10 @@ int main (){
 			    cout << "The members are: "<<endl;
 				system("start members.pdf");
 			    break;
+			    
+			case 9:
+				system("start game/game.exe");
+				break;
 			
 			default:
 				break;
@@ -418,14 +425,10 @@ int main (){
 		cout << "Desea volver a ejecutar el programa? (S/N): ";
 		cin >> respuesta;
 		cout << endl;
-	}while (respuesta == 's' or respuesta == 'S');
+	}while (respuesta == 's' or respuesta == 'S');      
 	
 	cout <<endl;
 	cout << "Gracias por haber iniciado la revista  "<<nombre <<"  Ten un buen dia :D"<<endl;
 	cout << endl;
-	
-
-	
-
     return 0;
 }
