@@ -63,7 +63,7 @@ int main (){
 	            cout << "************************************************"<<endl;
 	            cout << endl;
 
-                system("start C:/Users/eduar/Desktop/Proyecto2/portada.pdf");
+                system("start portada.pdf");
 
 	            cout << "************************************************"<<endl;
 	            cout << "**              Indice de la Revista          **"<<endl;
@@ -87,29 +87,30 @@ int main (){
 				cout << "------------------------------------------------"<<endl;
 		        cout << "7. Revista"<<endl;
 				cout << "8. Integrantes"<<endl;
-				cout << "9. Ayuda del sistema"<<endl;
-				cout << "10. Creditos"<<endl;
+				cout << "9. Juego didactico"<<endl;
+				cout << "10. Ayuda del sistema"<<endl;
+				cout << "11. Creditos"<<endl;
 				cin >> opcion2;
                 
 				switch (opcion2){
 				case 1:
 		    		cout << "EL Capitulo I es: "<<endl;
-	    			system("start C:/Users/eduar/Desktop/Proyecto2/proyecto.pdf");
+	    			system("start proyecto.pdf");
 					break;
 
 				case 2:
 				    cout << "EL Capitulo II es: "<<endl;
-			    	system("start C:/Users/eduar/Desktop/Proyecto2/proyecto1.pdf");
+			    	system("start proyecto1.pdf");
 				    break;
 
 				case 3:
 				    cout << "EL Capitulo III es: "<<endl;
-				    system("start C:/Users/eduar/Desktop/Proyecto2/proyecto2.pdf");
+				    system("start proyecto2.pdf");
 				    break;
 
 				case 4:
 				    cout << "EL Capitulo IV y V es: "<<endl;
-				    system("start C:/Users/eduar/Desktop/Proyecto2/proyecto3.pdf");
+				    system("start proyecto3.pdf");
 				    break;
 
 				case 5:
@@ -216,14 +217,15 @@ int main (){
 				    break;	
 				    
 				case 6:
-					system("start C:/Users/eduar/Desktop/Proyecto2/mate.pdf");
+					system("start mate.pdf");
 					break;
 
 				case 8:
 				    cout << "Los integrante son :"<<endl;
-				    system("start C:/Users/eduar/Desktop/Proyecto2/integrantes.pdf");
+				    system("start integrantes.pdf");
 				    break;
 				case 9:
+				system("start C:/Users/eduar/Desktop/proyecto2/juego/juego.exe");
 			    	break;
 				default:
 				cout << "Haz cometido un error! "<<nombre <<"  intenta de nuevo x_x"<<endl;
@@ -241,7 +243,7 @@ int main (){
 	        cout << "************************************************"<<endl;
 	        cout << endl;
 
-            system("start C:/Users/eduar/Desktop/Proyecto2/portada.pdf");
+            system("start portada.pdf");
 
             cout << "************************************************"<<endl;
 	        cout << "**                 Journal index              **"<<endl;
@@ -275,22 +277,22 @@ int main (){
 			{
 			case 1:
 			    cout << "Chapter I: "<<endl;
-				system("start C:/Users/eduar/Desktop/Proyecto2/ChapterI.pdf");
+				system("start ChapterI.pdf");
 				break;
 			
 			case 2:
 			    cout << "Chapter II: "<<endl;
-			    system("start C:/Users/eduar/Desktop/Proyecto2/ChapterII.pdf");
+			    system("start ChapterII.pdf");
 			    break;
 
 			case 3:
 			    cout << "Chapter III: "<<endl;
-				system("start C:/Users/eduar/Desktop/Proyecto2/ChapterIII.pdf");
+				system("start ChapterIII.pdf");
 			    break;
 
 			case 4:
 			    cout << "Chapter IV and V: "<<endl;
-				system("start C:/Users/eduar/Desktop/Proyecto2/ChapterI.pdf");
+				system("start ChapterI.pdf");
 		    	break;
 
 			case 5:
@@ -394,12 +396,12 @@ int main (){
 		    	break;
 		    	
 		    case 6:
-		    	system("start C:/Users/eduar/Desktop/Proyecto2/mate2.pdf");
+		    	system("start mate2.pdf");
 		    	break;
 
 			case 8:
 			    cout << "The members are: "<<endl;
-				system("start C:/Users/eduar/Desktop/Proyecto2/members.pdf");
+				system("start members.pdf");
 			    break;
 			
 			default:
