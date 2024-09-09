@@ -46,7 +46,7 @@ int main (){
 	cout << endl;
 
 	do{
-		cout << "En que idioma desea ejecutar el programa  "<<nombre <<endl;    //inicion del programa en español
+		cout << "En que idioma desea ejecutar el programa  "<<nombre <<endl;    //inicio del programa en español
 	    cout << "1. Español"<<endl;
 	    cout << "2. Ingles"<<endl;
 	    cout << "3. Salir"<<endl;
@@ -88,7 +88,7 @@ int main (){
 		        cout << "7. Revista"<<endl;
 				cout << "8. Integrantes"<<endl;
 				cout << "9. Ayuda del sistema"<<endl;
-
+				cout << "10. Creditos"<<endl;
 				cin >> opcion2;
                 
 				switch (opcion2){
@@ -115,7 +115,7 @@ int main (){
 				case 5:
 				    cout << "Bienvenido "<<nombre <<" a la calculadora de logaritmos \n que opcion quieres realizar"<<endl;
 					cout << "1. Logaritmo Natural"<<endl;
-					cout << "2. Logaritmo en base espesifica"<<endl;
+					cout << "2. Logaritmo en base especifica"<<endl;
 					cout << "3. Logaritmo en base Raiz cuadrada"<<endl;
 					cout << "4. Logaritmo en base de Fraccion "<<endl;
 					cout << "Ingrese un opcion: ";
@@ -177,7 +177,7 @@ int main (){
 
 						cout << "Paso 2: Calcular el logaritmo en base de raiz" <<endl;
 						cout << "log(" << numero << ") = " << log(numero) <<endl;
-						cout << "log(" << raiz << ") = " << log(raiz) << std::endl;
+						cout << "log(" << raiz << ") = " << log(raiz) <<endl;
 						double resultadoRaiz = log(numero) / log(raiz);
 						cout << endl;
 
@@ -214,6 +214,10 @@ int main (){
 					}
 					
 				    break;	
+				    
+				case 6:
+					system("start C:/Users/eduar/Desktop/Proyecto2/mate.pdf");
+					break;
 
 				case 8:
 				    cout << "Los integrante son :"<<endl;
@@ -262,6 +266,8 @@ int main (){
 	        cout << "7. Magazine"<<endl;
 			cout << "8. Members"<<endl;
 			cout << "9. System Help"<<endl;
+			cout << "10. credits"<<endl;
+			cout << endl;
 
 			cin >> opcion2;
 
@@ -385,6 +391,10 @@ int main (){
 					cout <<"Invalid option  " <<nombre <<"  Try again x_x"<<endl;
 				}
 
+		    	break;
+		    	
+		    case 6:
+		    	system("start C:/Users/eduar/Desktop/Proyecto2/mate2.pdf");
 		    	break;
 
 			case 8:
